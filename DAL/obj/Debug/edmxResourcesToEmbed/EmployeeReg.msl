@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AngualrJSModelStoreContainer" CdmEntityContainer="AngualrJSEntities">
+    <EntitySetMapping Name="EmployeeRegs">
+      <EntityTypeMapping TypeName="AngualrJSModel.EmployeeReg">
+        <MappingFragment StoreEntitySet="EmployeeReg">
+          <ScalarProperty Name="Eno" ColumnName="Eno" />
+          <ScalarProperty Name="Ename" ColumnName="Ename" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Hobbies" ColumnName="Hobbies" />
+          <ScalarProperty Name="City" ColumnName="City" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="SP_DeleteEmployee" FunctionName="AngualrJSModel.Store.SP_DeleteEmployee" />
+    <FunctionImportMapping FunctionImportName="SP_Getdetails" FunctionName="AngualrJSModel.Store.SP_Getdetails">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="AngualrJSModel.SP_Getdetails_Result">
+          <ScalarProperty Name="Eno" ColumnName="Eno" />
+          <ScalarProperty Name="Ename" ColumnName="Ename" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Hobbies" ColumnName="Hobbies" />
+          <ScalarProperty Name="City" ColumnName="City" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="SP_InsertEmp" FunctionName="AngualrJSModel.Store.SP_InsertEmp" />
+    <FunctionImportMapping FunctionImportName="SP_UpdateEmp" FunctionName="AngualrJSModel.Store.SP_UpdateEmp" />
+  </EntityContainerMapping>
+</Mapping>

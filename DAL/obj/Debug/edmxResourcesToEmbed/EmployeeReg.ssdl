@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AngualrJSModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="AngualrJSModelStoreContainer">
+    <EntitySet Name="EmployeeReg" EntityType="AngualrJSModel.Store.EmployeeReg" store:Type="Tables" store:Schema="dbo" store:Name="EmployeeReg">
+      <DefiningQuery>SELECT 
+      [EmployeeReg].[Eno] AS [Eno], 
+      [EmployeeReg].[Ename] AS [Ename], 
+      [EmployeeReg].[Salary] AS [Salary], 
+      [EmployeeReg].[Gender] AS [Gender], 
+      [EmployeeReg].[Hobbies] AS [Hobbies], 
+      [EmployeeReg].[City] AS [City]
+      FROM [dbo].[EmployeeReg] AS [EmployeeReg]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'AngualrJS.dbo.EmployeeReg' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="EmployeeReg">
+    <Key>
+      <PropertyRef Name="Eno" />
+    </Key>
+    <Property Name="Eno" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Ename" Type="varchar" MaxLength="25" />
+    <Property Name="Salary" Type="decimal" Scale="1" />
+    <Property Name="Gender" Type="bit" />
+    <Property Name="Hobbies" Type="varchar" MaxLength="50" />
+    <Property Name="City" Type="varchar" MaxLength="10" />
+  </EntityType>
+  <Function Name="SP_DeleteEmployee" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SP_Getdetails" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SP_InsertEmp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Ename" Type="varchar" Mode="In" />
+    <Parameter Name="Salary" Type="decimal" Mode="In" />
+    <Parameter Name="Gender" Type="bit" Mode="In" />
+    <Parameter Name="Hobbies" Type="varchar" Mode="In" />
+    <Parameter Name="City" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="SP_UpdateEmp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Eno" Type="int" Mode="In" />
+    <Parameter Name="Ename" Type="varchar" Mode="In" />
+    <Parameter Name="Salary" Type="decimal" Mode="In" />
+    <Parameter Name="Gender" Type="bit" Mode="In" />
+    <Parameter Name="Hobbies" Type="varchar" Mode="In" />
+    <Parameter Name="City" Type="varchar" Mode="In" />
+  </Function>
+</Schema>
