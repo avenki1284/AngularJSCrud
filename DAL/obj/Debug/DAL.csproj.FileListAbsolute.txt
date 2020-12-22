@@ -1,0 +1,8 @@
+C:\Users\KSTL\Desktop\VENAKTESH\ANGULARJS\DAL\bin\Debug\DAL.dll.config
+C:\Users\KSTL\Desktop\VENAKTESH\ANGULARJS\DAL\bin\Debug\DAL.dll
+C:\Users\KSTL\Desktop\VENAKTESH\ANGULARJS\DAL\bin\Debug\DAL.pdb
+C:\Users\KSTL\Desktop\VENAKTESH\ANGULARJS\DAL\bin\Debug\EntityFramework.dll
+C:\Users\KSTL\Desktop\VENAKTESH\ANGULARJS\DAL\bin\Debug\EntityFramework.xml
+C:\Users\KSTL\Desktop\VENAKTESH\ANGULARJS\DAL\obj\Debug\DAL.dll
+C:\Users\KSTL\Desktop\VENAKTESH\ANGULARJS\DAL\obj\Debug\DAL.pdb
+C:\Users\KSTL\Desktop\VENAKTESH\ANGULARJS\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache

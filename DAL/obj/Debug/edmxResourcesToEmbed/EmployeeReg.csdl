@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AngualrJSModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="AngualrJSEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="EmployeeRegs" EntityType="AngualrJSModel.EmployeeReg" />
+    <FunctionImport Name="SP_DeleteEmployee">
+      <Parameter Name="Id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SP_Getdetails" ReturnType="Collection(AngualrJSModel.SP_Getdetails_Result)" />
+    <FunctionImport Name="SP_InsertEmp">
+      <Parameter Name="Ename" Mode="In" Type="String" />
+      <Parameter Name="Salary" Mode="In" Type="Decimal" />
+      <Parameter Name="Gender" Mode="In" Type="Boolean" />
+      <Parameter Name="Hobbies" Mode="In" Type="String" />
+      <Parameter Name="City" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SP_UpdateEmp">
+      <Parameter Name="Eno" Mode="In" Type="Int32" />
+      <Parameter Name="Ename" Mode="In" Type="String" />
+      <Parameter Name="Salary" Mode="In" Type="Decimal" />
+      <Parameter Name="Gender" Mode="In" Type="Boolean" />
+      <Parameter Name="Hobbies" Mode="In" Type="String" />
+      <Parameter Name="City" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="EmployeeReg">
+    <Key>
+      <PropertyRef Name="Eno" />
+    </Key>
+    <Property Name="Eno" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="Ename" Type="String" MaxLength="25" Unicode="false" FixedLength="false" />
+    <Property Name="Salary" Type="Decimal" Precision="18" Scale="1" />
+    <Property Name="Gender" Type="Boolean" />
+    <Property Name="Hobbies" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="City" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+  </EntityType>
+  <ComplexType Name="SP_Getdetails_Result">
+    <Property Type="Int32" Name="Eno" Nullable="false" />
+    <Property Type="String" Name="Ename" Nullable="true" MaxLength="25" />
+    <Property Type="Decimal" Name="Salary" Nullable="true" Precision="18" Scale="1" />
+    <Property Type="Boolean" Name="Gender" Nullable="true" />
+    <Property Type="String" Name="Hobbies" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="City" Nullable="true" MaxLength="10" />
+  </ComplexType>
+</Schema>
