@@ -1,5 +1,5 @@
-﻿@{  
-    ViewBag.Title = "Index";  
+﻿@{
+    ViewBag.Title = "Index";
 }
 <script src="~/SCRIPTS/angular.js"></script>
 <script src="~/SCRIPTS/Angularcode.js"></script>
@@ -11,38 +11,63 @@
     }
 </style>
 <h2>Index</h2>
-<div>
-    <div class="divList">
+<div ng-app="myApp">
+    <div class="divList" ng-init="GetAllData()" ng-controller="MyController">
         <p class="divHead">List of Employee</p>
         <table cellpadding="12" class="table table-bordered table-hover">
             <tr>
                 <td>
-                    <b>ID</b>
+                    <b>Eno</b>
                 </td>
                 <td>
-                    <b>Name</b>
+                    <b>Ename</b>
+                </td>
+                <td>
+                    <b>Salary</b>
+                </td>
+                <td>
+                    <b>Gender</b>
                 </td>
                 <td>
                     <b>City</b>
                 </td>
                 <td>
-                    <b>Age</b>
+                    <b>Hobbies</b>
                 </td>
                 <td>
-                    <b>Actions</b>
+                    <b>Hobbies1</b>
+                </td>
+                <td>
+                    <b>Hobbies2</b>
                 </td>
             </tr>
             <tr ng-repeat="Emp in employees">
-                <td>{{Emp.Emp_Id}}  
-                </td>
-                <td>{{Emp.Emp_Name}}  
-                </td>
-                <td>{{Emp.Emp_City}}  
-                </td>
-                <td>{{Emp.Emp_Age}}  
+                <td>
+                    {{Emp.Eno}}
                 </td>
                 <td>
-                    <input type="button" class="btn btn-warning" value="Update" ng-click="UpdateEmp(Emp)" />
+                    {{Emp.Ename}}
+                </td>
+                <td>
+                    {{Emp.Salary}}
+                </td>
+                <td>
+                    {{Emp.Gender}}
+                </td>
+                <td>
+                    {{Emp.City}}
+                </td>
+                <td>
+                    {{Emp.Hobbies}}
+                </td>
+                <td>
+                    {{Emp.Hobbies1}}
+                </td>
+                <td>
+                    {{Emp.Hobbies2}}
+                </td>
+                <td>
+                    <input type="button" class="btn btn-warning" value="Update"/>
                     <input type="button" class="btn btn-danger" value="Delete" ng-click="DeleteEmp(Emp)" />
                 </td>
             </tr>
@@ -57,44 +82,54 @@
                 <div class="row">
                     <div class="col-sm-6 col-lg-4">
                         <div class="form-group">
-                            <label class="col-md-4 control-label">Name:</label>
+                            <label class="col-md-4 control-label">EmpName:</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control" id="inputEmail" placeholder="Name" ng-model="EmpName">
+                                <input type="text" class="form-control" id="EmpName" placeholder="EmpName" ng-model="EmpName">
                             </div>
                         </div>
                     </div>
                     <div class="col-sm-6 col-lg-4">
                         <div class="form-group">
-                            <label class="col-md-4 control-label">City:</label>
+                            <label class="col-md-4 control-label">EmpSalary:</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control" id="inputPassword" placeholder="City" ng-model="EmpCity">
+                                <input type="text" class="form-control" id="EmpSalary" placeholder="EmpSalary" ng-model="EmpSalary">
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-6 col-lg-4">
-                        <div class="form-group">
-                            <label class="col-md-4 control-label">Age:</label>
-                            <div class="col-md-8">
-                                <input type="text" class="form-control" id="inputLabel3" placeholder="Age" ng-model="EmpAge">
-                            </div>
+
+                    <div id="demo">
+                        <input type="radio" value="Male" ng-model="selectedvalue" name="rab" />Male
+                        <input type="radio" value="Female" ng-model="selectedvalue" name="rab" />Female
+                    </div>
+                    <div>
+                        <input type="checkbox" value="Cricket" ng-model="selectedvalue0" />Cricket
+                        <input type="checkbox" value="Songs" ng-model="selectedvalue1" />Songs
+                        <input type="checkbox" value="Chess" ng-model="selectedvalue2" />Chess
+                    </div>
+
+                    @*<div ng-repeat="Hobbie in Hobbies">
+                    <input ng-model="Hobbie.checked" type='checkbox' ng-model-options="Hobbie.Hobbi" value="{{Hobbie.HobbieId}}" />
+                    <label>{{Hobbie.HobbieName}}</label>
+                </div>*@
+                    <div class="form-group">
+                        <label for="sel1">Select City:</label>
+                        <select ng-model="Selectlist" class="form-control" id="City">
+                            <option>Please Select</option>
+                            <option value="Hyd">Hyd</option>
+                            <option value="Chennai">Chennai</option>
+                            <option value="Bengaluru">Bengaluru</option>
+                            <option value="Mumbai">Mumbai</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <div>
+                            <input type="button" id="btnInsert" value="insert" ng-click="InsertData()" />
                         </div>
                     </div>
-                    <div ng-app="myApp" ng-controller="MyController">
-                        <div ng-repeat="Hobbie in Hobbies">
-                            <label for="chkCustomer_{{Hobbie.hobbyid}}">
-                                <input id="chkCustomer_{{Hobbie.hobbyid}}" type="checkbox" ng-model="Hobbie.Selected" />
-                                {{Hobbie.Name}}
-                            </label>
-                        </div>
-                    </div>
-                   <div>
-                       <div>
-                           <input type="button" id="btnSave" value="Submit"/>
-                       </div>
-                   </div>
-                </div>
             </div>
+            
         </div>
-        @Html.Hidden("EmpID_")
+       
 
     </div>

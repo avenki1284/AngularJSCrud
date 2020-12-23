@@ -26,3 +26,35 @@ C:\Users\KSTL\Desktop\VENAKTESH\ANGULARJS\ANGULARJS\bin\System.Web.WebPages.Razo
 C:\Users\KSTL\Desktop\VENAKTESH\ANGULARJS\ANGULARJS\obj\Debug\ANGULARJS.csprojResolveAssemblyReference.cache
 C:\Users\KSTL\Desktop\VENAKTESH\ANGULARJS\ANGULARJS\obj\Debug\ANGULARJS.dll
 C:\Users\KSTL\Desktop\VENAKTESH\ANGULARJS\ANGULARJS\obj\Debug\ANGULARJS.pdb
+C:\Users\KSTL\Desktop\VENAKTESH\Git Repositories\AngularJSCrud\ANGULARJS\bin\ANGULARJS.dll.config
+C:\Users\KSTL\Desktop\VENAKTESH\Git Repositories\AngularJSCrud\ANGULARJS\bin\ANGULARJS.dll
+C:\Users\KSTL\Desktop\VENAKTESH\Git Repositories\AngularJSCrud\ANGULARJS\bin\ANGULARJS.pdb
+C:\Users\KSTL\Desktop\VENAKTESH\Git Repositories\AngularJSCrud\ANGULARJS\bin\DAL.dll
+C:\Users\KSTL\Desktop\VENAKTESH\Git Repositories\AngularJSCrud\ANGULARJS\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\KSTL\Desktop\VENAKTESH\Git Repositories\AngularJSCrud\ANGULARJS\bin\Newtonsoft.Json.dll
+C:\Users\KSTL\Desktop\VENAKTESH\Git Repositories\AngularJSCrud\ANGULARJS\bin\System.Net.Http.Formatting.dll
+C:\Users\KSTL\Desktop\VENAKTESH\Git Repositories\AngularJSCrud\ANGULARJS\bin\System.Web.Helpers.dll
+C:\Users\KSTL\Desktop\VENAKTESH\Git Repositories\AngularJSCrud\ANGULARJS\bin\System.Web.Http.dll
+C:\Users\KSTL\Desktop\VENAKTESH\Git Repositories\AngularJSCrud\ANGULARJS\bin\System.Web.Http.WebHost.dll
+C:\Users\KSTL\Desktop\VENAKTESH\Git Repositories\AngularJSCrud\ANGULARJS\bin\System.Web.Mvc.dll
+C:\Users\KSTL\Desktop\VENAKTESH\Git Repositories\AngularJSCrud\ANGULARJS\bin\System.Web.Razor.dll
+C:\Users\KSTL\Desktop\VENAKTESH\Git Repositories\AngularJSCrud\ANGULARJS\bin\System.Web.WebPages.Deployment.dll
+C:\Users\KSTL\Desktop\VENAKTESH\Git Repositories\AngularJSCrud\ANGULARJS\bin\System.Web.WebPages.dll
+C:\Users\KSTL\Desktop\VENAKTESH\Git Repositories\AngularJSCrud\ANGULARJS\bin\System.Web.WebPages.Razor.dll
+C:\Users\KSTL\Desktop\VENAKTESH\Git Repositories\AngularJSCrud\ANGULARJS\bin\DAL.pdb
+C:\Users\KSTL\Desktop\VENAKTESH\Git Repositories\AngularJSCrud\ANGULARJS\bin\DAL.dll.config
+C:\Users\KSTL\Desktop\VENAKTESH\Git Repositories\AngularJSCrud\ANGULARJS\bin\Newtonsoft.Json.xml
+C:\Users\KSTL\Desktop\VENAKTESH\Git Repositories\AngularJSCrud\ANGULARJS\bin\System.Net.Http.Formatting.xml
+C:\Users\KSTL\Desktop\VENAKTESH\Git Repositories\AngularJSCrud\ANGULARJS\bin\System.Web.Helpers.xml
+C:\Users\KSTL\Desktop\VENAKTESH\Git Repositories\AngularJSCrud\ANGULARJS\bin\System.Web.Http.xml
+C:\Users\KSTL\Desktop\VENAKTESH\Git Repositories\AngularJSCrud\ANGULARJS\bin\System.Web.Http.WebHost.xml
+C:\Users\KSTL\Desktop\VENAKTESH\Git Repositories\AngularJSCrud\ANGULARJS\bin\System.Web.Mvc.xml
+C:\Users\KSTL\Desktop\VENAKTESH\Git Repositories\AngularJSCrud\ANGULARJS\bin\System.Web.Razor.xml
+C:\Users\KSTL\Desktop\VENAKTESH\Git Repositories\AngularJSCrud\ANGULARJS\bin\System.Web.WebPages.xml
+C:\Users\KSTL\Desktop\VENAKTESH\Git Repositories\AngularJSCrud\ANGULARJS\bin\System.Web.WebPages.Deployment.xml
+C:\Users\KSTL\Desktop\VENAKTESH\Git Repositories\AngularJSCrud\ANGULARJS\bin\System.Web.WebPages.Razor.xml
+C:\Users\KSTL\Desktop\VENAKTESH\Git Repositories\AngularJSCrud\ANGULARJS\obj\Debug\ANGULARJS.csprojAssemblyReference.cache
+C:\Users\KSTL\Desktop\VENAKTESH\Git Repositories\AngularJSCrud\ANGULARJS\obj\Debug\ANGULARJS.csproj.CoreCompileInputs.cache
+C:\Users\KSTL\Desktop\VENAKTESH\Git Repositories\AngularJSCrud\ANGULARJS\obj\Debug\ANGULARJS.csproj.CopyComplete
+C:\Users\KSTL\Desktop\VENAKTESH\Git Repositories\AngularJSCrud\ANGULARJS\obj\Debug\ANGULARJS.dll
+C:\Users\KSTL\Desktop\VENAKTESH\Git Repositories\AngularJSCrud\ANGULARJS\obj\Debug\ANGULARJS.pdb
