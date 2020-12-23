@@ -9,10 +9,14 @@ namespace DAL.DALPROPERTIES
    public class Employeereg
     {
        public int Eno { get; set; }
-        public string EmpName { get; set; }
-        public double salary { get; set; }
-        public bool Gender { get; set; }
-        public string hobbies { get; set; }
-        public string city { get; set; }
+        public string Ename { get; set; }
+        public double Salary { get; set; }
+        public string Gender { get; set; }
+        public string Hobbies { get; set; }
+
+        public string Hobbies1 { get; set; }
+        public string Hobbies2 { get; set; }
+
+        public string City { get; set; }
     }
 }
