@@ -25,5 +25,11 @@ namespace ANGULARJS.Controllers
         {
             return Json(ob.DeleteEmployee(Emp), JsonRequestBehavior.AllowGet);
         }
+        public JsonResult Update(DAL.DALPROPERTIES.Employeereg Employe)
+
+
+        {
+            return Json(ob.Update(Employe), JsonRequestBehavior.AllowGet);
+        }
     }
 }
