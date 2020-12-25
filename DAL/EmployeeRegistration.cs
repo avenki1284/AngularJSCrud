@@ -24,45 +24,35 @@ namespace DAL
                 com.Parameters.AddWithValue("@Ename", emp.Ename);
                 com.Parameters.AddWithValue("@Salary", emp.Salary);
                 com.Parameters.AddWithValue("@Gender", emp.Gender);
-
                 if (emp.Hobbies == "True")
                 {
-                    //var a = "Cricket";
-                    emp.Hobbies = "Cricket";
-                    com.Parameters.AddWithValue("@Hobbies", Convert.ToString(emp.Hobbies));
+                    var a = Convert.ToString(emp.Hobbies);
+                    a = "Cricket";
+                    com.Parameters.AddWithValue("@Hobbies", Convert.ToString(a));
                 }
                 else
                 {
-                    var b = "Not selecteed";
-
-                    emp.Hobbies = "Not selecteed";
-                    com.Parameters.AddWithValue("@Hobbies", Convert.ToString(emp.Hobbies));
+                    com.Parameters.AddWithValue("@Hobbies",null);
                 }
                 if (emp.Hobbies1 == "True")
                 {
-
-                    var c = "Songs";
-                    emp.Hobbies1 = "Songs";
-                    com.Parameters.AddWithValue("@Hobbies1", Convert.ToString(emp.Hobbies1));
+                    var a = Convert.ToString(emp.Hobbies1);
+                    a = "Songs";
+                    com.Parameters.AddWithValue("@Hobbies1", Convert.ToString(a));
                 }
                 else
                 {
-                    var d = "Not selecteed";
-                    emp.Hobbies1 = "Not selecteed";
-                    com.Parameters.AddWithValue("@Hobbies1", Convert.ToString(emp.Hobbies1));
+                    com.Parameters.AddWithValue("@Hobbies1",null);
                 }
                 if (emp.Hobbies2 == "True")
                 {
-                    var e = "Chess";
-                   emp.Hobbies2 = "Chess";
-                    com.Parameters.AddWithValue("@Hobbies2", Convert.ToString(emp.Hobbies2));
+                    var a = Convert.ToString(emp.Hobbies1);
+                    a = "Chess";
+                    com.Parameters.AddWithValue("@Hobbies2", Convert.ToString(a));
                 }
                 else
-                {
-                    var f = "Not selecteed";
-                     emp.Hobbies2 = "Not selecteed";
-
-                    com.Parameters.AddWithValue("@Hobbies2", Convert.ToString(emp.Hobbies2));
+                { 
+                    com.Parameters.AddWithValue("@Hobbies2", null);
                 }
                 com.Parameters.AddWithValue("@City", emp.City);
                 i = com.ExecuteNonQuery();
@@ -108,52 +98,62 @@ namespace DAL
             }
             return i;
         }
-        //public int Update(Registration emp)
-        //{
-        //    int i;
-        //    using (SqlConnection con = new SqlConnection(cs))
-        //    {
-        //        con.Open();
-        //        SqlCommand com = new SqlCommand("UpdateEmployee", con);
-        //        com.CommandType = CommandType.StoredProcedure;
-        //        com.Parameters.AddWithValue("@Id", emp.Id);
-        //        com.Parameters.AddWithValue("@Name", emp.Name);
-        //        com.Parameters.AddWithValue("@Password", emp.Password);
-        //        com.Parameters.AddWithValue("@DOB", emp.DOB);
-        //        com.Parameters.AddWithValue("@Gender", emp.Gender);
-        //        com.Parameters.AddWithValue("@Address", emp.Address);
-        //        com.Parameters.AddWithValue("@City", emp.City);
-        //        if (emp.Hobbies1 != "Cricket")
-        //        {
-        //            var b = "Not Selected";
-        //            com.Parameters.AddWithValue("@Hobbies1", b);
-        //        }
-        //        else
-        //        {
-        //            com.Parameters.AddWithValue("@Hobbies1", emp.Hobbies1);
-        //        }
-        //        if (emp.Hobbies2 != "Songs")
-        //        {
-        //            var b = "Not Selected";
-        //            com.Parameters.AddWithValue("@Hobbies2", b);
-        //        }
-        //        else
-        //        {
-        //            com.Parameters.AddWithValue("@Hobbies2", emp.Hobbies2);
-        //        }
-        //        if (emp.hobbies3 != "Chess")
-        //        {
-        //            var b = "Not Selected";
-        //            com.Parameters.AddWithValue("@hobbies3", b);
-        //        }
-        //        else
-        //        {
-        //            com.Parameters.AddWithValue("@hobbies3", emp.hobbies3);
-        //        }
-        //        i = com.ExecuteNonQuery();
-        //    }
-        //    return i;
-        //}
+        public int Update(Employeereg Employe)
+        {
+            int i;
+            using (SqlConnection con = new SqlConnection(connection))
+            {
+                con.Open();
+                SqlCommand com = new SqlCommand("SP_UpdateEmp", con);
+                com.CommandType = CommandType.StoredProcedure;
+                
+                com.Parameters.AddWithValue("@Eno", Employe.Eno);
+                com.Parameters.AddWithValue("@Ename", Employe.Ename);
+                
+                com.Parameters.AddWithValue("@Salary",Employe.Salary);
+                com.Parameters.AddWithValue("@Gender", Employe.Gender);
+                if (Employe.Hobbies == "True")
+                {
+                    var a = Convert.ToString(Employe.Hobbies);
+                    a = "Cricket";
+                    com.Parameters.AddWithValue("@Hobbies", Convert.ToString(a));
+                }
+                else
+                {
+
+                    com.Parameters.AddWithValue("@Hobbies", DBNull.Value);
+                }
+                if (Employe.Hobbies1 == "True")
+                {
+
+                    var a = Convert.ToString(Employe.Hobbies1);
+                    a = "Songs";
+                    com.Parameters.AddWithValue("@Hobbies1", Convert.ToString(a));
+                }
+                else
+                {
+
+                    com.Parameters.AddWithValue("@Hobbies1", DBNull.Value);
+                }
+                if (Employe.Hobbies2 == "True")
+                {
+                    var a = Convert.ToString(Employe.Hobbies1);
+                    a = "Chess";
+
+
+                    com.Parameters.AddWithValue("@Hobbies2", Convert.ToString(a));
+                }
+                else
+                {
+                    // var a = Convert.ToString(emp.Hobbies2);
+                    //a = "Not selecteed";
+                    com.Parameters.AddWithValue("@Hobbies2", DBNull.Value);
+                }
+                com.Parameters.AddWithValue("@City", Employe.City);
+                i = com.ExecuteNonQuery();
+            }
+            return i;
+        }
     }
 
 }

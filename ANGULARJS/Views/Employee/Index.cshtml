@@ -67,7 +67,7 @@
                     {{Emp.Hobbies2}}
                 </td>
                 <td>
-                    <input type="button" class="btn btn-warning" value="Update"/>
+                    <input type="button" class="btn btn-warning" value="Update" ng-click="UpdateEmp(Emp)"/>
                     <input type="button" class="btn btn-danger" value="Delete" ng-click="DeleteEmp(Emp)" />
                 </td>
             </tr>
@@ -84,7 +84,11 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label">EmpName:</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control" id="EmpName" placeholder="EmpName" ng-model="EmpName">
+                                <input type="text" required class="form-control" id="EmpName" placeholder="EmpName" ng-model="EmpName">
+                            </div>
+
+                            <div class="col-md-8">
+                                <input type="hidden" required class="form-control" id="Eno" placeholder="EmpNo" />
                             </div>
                         </div>
                     </div>
@@ -92,25 +96,20 @@
                         <div class="form-group">
                             <label class="col-md-4 control-label">EmpSalary:</label>
                             <div class="col-md-8">
-                                <input type="text" class="form-control" id="EmpSalary" placeholder="EmpSalary" ng-model="EmpSalary">
+                                <input type="text" required class="form-control" id="EmpSalary" placeholder="EmpSalary" ng-model="EmpSalary">
                             </div>
                         </div>
                     </div>
 
                     <div id="demo">
-                        <input type="radio" value="Male" ng-model="selectedvalue" name="rab" />Male
-                        <input type="radio" value="Female" ng-model="selectedvalue" name="rab" />Female
+                        <input type="radio" required value="Male" ng-model="selectedvalue" name="rab" />Male
+                        <input type="radio" required value="Female" ng-model="selectedvalue" name="rab" />Female
                     </div>
                     <div>
-                        <input type="checkbox" value="Cricket" ng-model="selectedvalue0" />Cricket
-                        <input type="checkbox" value="Songs" ng-model="selectedvalue1" />Songs
-                        <input type="checkbox" value="Chess" ng-model="selectedvalue2" />Chess
+                        <input type="checkbox" required id="chk" ng-model="selectedvalue0" />Cricket
+                        <input type="checkbox" required id="chk1" value="Songs" ng-model="selectedvalue1" />Songs
+                        <input type="checkbox" required id="chk2" value="Chess" ng-model="selectedvalue2" />Chess
                     </div>
-
-                    @*<div ng-repeat="Hobbie in Hobbies">
-                    <input ng-model="Hobbie.checked" type='checkbox' ng-model-options="Hobbie.Hobbi" value="{{Hobbie.HobbieId}}" />
-                    <label>{{Hobbie.HobbieName}}</label>
-                </div>*@
                     <div class="form-group">
                         <label for="sel1">Select City:</label>
                         <select ng-model="Selectlist" class="form-control" id="City">
@@ -127,9 +126,9 @@
                             <input type="button" id="btnInsert" value="insert" ng-click="InsertData()" />
                         </div>
                     </div>
-            </div>
-            
-        </div>
-       
+                </div>
 
-    </div>
+            </div>
+
+            @Html.Hidden("Eno")
+        </div>
